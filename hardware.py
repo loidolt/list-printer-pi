@@ -20,7 +20,7 @@ def yellowLED(status):
     if status == 1:
         yellow.on()
     elif status == 3:
-        yellow.n()
+        yellow.blink()
     else:
         yellow.off()
 
