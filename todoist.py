@@ -34,7 +34,7 @@ def getProjectInfo(project_id):
     response = requests.get(
         config.todoist["project_endpoint"] + str(project_id),
         headers={"Authorization": "Bearer %s" % config.todoist["token"]},
-    ).json()
+    )
     if response.status_code == 200:
         res_dict = response.json()
 
@@ -52,7 +52,7 @@ def getTasks(project_id):
         + str(project_id)
         + "&filter=today",
         headers={"Authorization": "Bearer %s" % config.todoist["token"]},
-    ).json()
+    )
     if response.status_code == 200:
         res_dict = response.json()
 
