@@ -12,22 +12,26 @@ from printHandler import printList, printError
 
 
 def getProjectID(button):
-    # Turn on yellow LED
-    yellowLED(1)
 
     if button == 1:
+        yellowLED(1)
+
         project = getProjectInfo(config.projects["id1"])
         tasks = getTasks(config.projects["id1"])
 
         printList(config.projects["id1"], project, tasks)
 
     elif button == 2:
+        yellowLED(1)
+
         project = getProjectInfo(config.projects["id2"])
         tasks = getTasks(config.projects["id2"])
 
         printList(config.projects["id2"], project, tasks)
 
     elif button == 3:
+        yellowLED(1)
+
         project = getProjectInfo(config.projects["id3"])
         tasks = getTasks(config.projects["id3"])
 
