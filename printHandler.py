@@ -31,4 +31,5 @@ def printList(id, project, list):
 
 def printError(error):
     printer.text("Whoopsies, got an error :(\n")
+    printer.text(str(error))
     printer.cut()
