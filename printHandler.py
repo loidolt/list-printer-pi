@@ -29,7 +29,18 @@ def printList(id, project, tasks):
 
     # Print tasks
     printer.set(align="left")
-    printer.text(str(tasks))
+
+    # Iterate through tasks
+    for key, value in tasks.items():
+        for k, v in value:
+            printer.text(value["content"])
+
+    printer.text("\n")
+
+    # Generic Spacing After List
+    printer.text("\n")
+    printer.text("\n")
+    printer.text("\n")
     printer.text("\n")
 
 
