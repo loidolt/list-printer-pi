@@ -21,6 +21,7 @@ def printList(id, project, list):
     printer.text(project)
     printer.text(" To Do")
     printer.text("\n")
+    printer.text("\n")
     printer.set(align="center")
     printer.qr("https://todoist.com/app/?lang=en#project%2F" + str(id))
     printer.text("\n")
