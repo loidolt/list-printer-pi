@@ -12,8 +12,10 @@ yellow = LED(27)
 def greenLED(status):
     if status == 1:
         green.on()
+        return
     else:
         green.off()
+        return
 
 
 def yellowLED(status):
