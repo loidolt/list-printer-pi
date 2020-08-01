@@ -19,8 +19,6 @@ def greenLED(status):
 def yellowLED(status):
     if status == 1:
         yellow.on()
-    elif status == 3:
-        yellow.blink()
     else:
         yellow.off()
 

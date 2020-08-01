@@ -22,7 +22,7 @@ printer.cut()
 def printList(id, project, tasks):
 
     # Turn on blinking LED
-    yellowLED(3)
+    yellowLED(1)
 
     # Print Header
     printer.set(align="center")
