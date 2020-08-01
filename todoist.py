@@ -36,10 +36,8 @@ def getProjectInfo(project_id):
         headers={"Authorization": "Bearer %s" % config.todoist["token"]},
     )
     if response.status_code == 200:
-        # res_dict = response.json()
-        # return res_dict["name"]
-
-        return response[0].name
+        res_dict = response.json()
+        return res_dict["name"]
     else:
         print("Error code: ")
         print(response.status_code)
@@ -55,8 +53,8 @@ def getTasks(project_id):
         headers={"Authorization": "Bearer %s" % config.todoist["token"]},
     )
     if response.status_code == 200:
-
-        return response
+        res_dict = response.json()
+        return res_dict
     else:
         print("Error code: ")
         print(response.status_code)

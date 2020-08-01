@@ -16,7 +16,7 @@ printer.qr("https://github.com/loidolt/list-printer-pi.git")
 printer.cut()
 
 
-def printList(id, project, list):
+def printList(id, project, tasks):
     # Print Header
     printer.text(project)
     printer.text(" To Do")
@@ -28,6 +28,9 @@ def printList(id, project, list):
     printer.text("\n")
 
     # Print tasks
+    printer.set(align="left")
+    printer.text(tasks)
+    printer.text("\n")
 
 
 def printError(error):
