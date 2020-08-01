@@ -11,6 +11,7 @@ printer = Serial(
     dsrdtr=True,
 )
 
+printer.set(align="center")
 printer.text("List Printer Pi\n")
 printer.qr("https://github.com/loidolt/list-printer-pi.git")
 printer.cut()
@@ -31,9 +32,9 @@ def printList(id, project, tasks):
     printer.set(align="left")
 
     # Iterate through tasks
-    for i in tasks.keys():
-        for j in tasks[i].keys():
-            printer.text(str(j))
+    for index in range(len(tasks)):
+        for key in tasks[index]:
+            printer.text(str(tasks[index][key]))
 
     printer.text("\n")
 
