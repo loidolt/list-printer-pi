@@ -26,6 +26,6 @@ Enter the correct serial baud rate in the first line. This can be found by holdi
 
 2. Install requirements using the following command:
 
-'pip install -r requirements.txt'
+'pip3 install -r requirements.txt'
 
 3. Copy config-sample.py to a new file called config.py. Populate with your Todoist API token and which projects you want to associate with each button action.
