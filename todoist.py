@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# encoding:utf8
+#!/usr/bin/env python3
 
 import todoist
 import requests
