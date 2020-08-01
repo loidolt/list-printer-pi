@@ -15,7 +15,7 @@ def getProjectID(button):
         project = getProjectInfo(config.projects["id1"])
         tasks = getTasks(config.projects["id1"])
 
-        printList(config.projects["id1"], "test", tasks)
+        printList(config.projects["id1"], project, tasks)
 
     elif button == 2:
         project = getProjectInfo(config.projects["id2"])
