@@ -32,10 +32,12 @@ def getProjectID(button):
     elif button == 3:
         yellowLED(1)
 
-        project = getProjectInfo(config.projects["id3"])
-        tasks = getTasks(config.projects["id3"])
+        # SAVE FOR FUTURE USE
 
-        printList(config.projects["id3"], project, tasks)
+        # project = getProjectInfo(config.projects["id3"])
+        # tasks = getTasks(config.projects["id3"])
+
+        printList("12345", "Not Configured", [])
 
 
 def getProjectInfo(project_id):
