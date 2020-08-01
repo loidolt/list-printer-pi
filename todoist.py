@@ -38,7 +38,7 @@ def getProjectInfo(project_id):
     if response.status_code == 200:
         res_dict = response.json()
 
-        return res_dict.name
+        return res_dict["name"]
     else:
         print("Error code: ")
         print(response.status_code)
