@@ -7,10 +7,14 @@ import re
 import argparse
 
 import config
+from hardware import yellowLED
 from printHandler import printList, printError
 
 
 def getProjectID(button):
+    # Turn on yellow LED
+    yellowLED(1)
+
     if button == 1:
         project = getProjectInfo(config.projects["id1"])
         tasks = getTasks(config.projects["id1"])

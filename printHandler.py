@@ -21,9 +21,6 @@ printer.cut()
 
 def printList(id, project, tasks):
 
-    # Turn on blinking LED
-    yellowLED(1)
-
     # Print Header
     printer.set(align="center")
     printer.text(project)
@@ -50,7 +47,7 @@ def printList(id, project, tasks):
     printer.text("\n")
     printer.text("\n")
 
-    # Turn off blinking LED
+    # Turn off yellow LED
     yellowLED(0)
 
 
@@ -58,3 +55,6 @@ def printError(error):
     printer.text("Whoopsies, got an error :(\n")
     printer.text(str(error))
     printer.cut()
+
+    # Turn off yellow LED
+    yellowLED(0)
