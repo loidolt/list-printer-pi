@@ -29,7 +29,7 @@ def printList(id, project, tasks):
 
     # Print tasks
     printer.set(align="left")
-    printer.text(tasks)
+    printer.text(str(tasks))
     printer.text("\n")
 
 
