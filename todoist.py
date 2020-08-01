@@ -31,7 +31,7 @@ def getProjectID(button):
 
 
 def getProjectInfo(project_id):
-    response = requests.get(config.todoist["project_endpoint"] + project_id)
+    response = requests.get(config.todoist["project_endpoint"] + str(project_id))
     if response.status_code == 200:
         res_dict = response.json()
 
@@ -44,12 +44,15 @@ def getProjectInfo(project_id):
 
 def getTasks(project_id):
     response = requests.get(
-        config.todoist["tasks_endpoint"] + "project_id=" + project_id + "&filter=today"
+        config.todoist["tasks_endpoint"]
+        + "project_id="
+        + str(project_id)
+        + "&filter=today"
     )
     if response.status_code == 200:
         res_dict = response.json()
 
-        return(res_dict)
+        return res_dict
     else:
         print("Error code: ")
         print(response.status_code)
