@@ -1,5 +1,8 @@
 from escpos.printer import Serial
 
+# https://github.com/python-escpos/python-escpos
+# https://python-escpos.readthedocs.io/en/latest/
+
 from hardware import yellowLED
 
 """ 9600 Baud, 8N1, Flow Control Enabled """
@@ -22,7 +25,7 @@ printer.cut()
 def printList(id, project, tasks):
 
     # Print Header
-    printer.set(align="center")
+    printer.set(align="center", height="4")
     printer.text(project)
     printer.text(" To Do")
     printer.text("\n")
