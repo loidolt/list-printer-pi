@@ -22,13 +22,11 @@ def printList(id, project, list):
     printer.text(" To Do")
     printer.text("\n")
     printer.set(align="center")
-    printer.qr("https://todoist.com/app/?lang=en#project%2F" + project)
+    printer.qr("https://todoist.com/app/?lang=en#project%2F" + str(id))
     printer.text("\n")
     printer.text("\n")
 
     # Print tasks
-    
-
 
 
 def printError(error):
