@@ -25,7 +25,7 @@ printer.cut()
 def printList(id, project, tasks):
 
     # Print Header
-    printer.set(align="center", height="4")
+    printer.set(align="center")
     printer.text(project)
     printer.text(" To Do")
     printer.text("\n")
