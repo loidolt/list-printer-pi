@@ -34,4 +34,3 @@ def pollButtons():
 
     if button3.is_pressed:
         return 3
-    sleep(1)
