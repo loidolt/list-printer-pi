@@ -18,7 +18,6 @@ printer.cut()
 
 def printList(id, project, list):
     # Print Header
-    printer.set(font="a", height=2, align="center", bold=True, double_height=True)
     printer.text(project)
     printer.text(" To Do")
     printer.text("\n")
