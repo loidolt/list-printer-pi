@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from hardware import greenLED, yellowLED, pollButtons
+from hardware import greenLED, pollButtons
 from todoist import getProjectID
 
 

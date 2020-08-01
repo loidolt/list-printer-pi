@@ -1,5 +1,7 @@
 from escpos.printer import Serial
 
+from hardware import yellowLED
+
 """ 9600 Baud, 8N1, Flow Control Enabled """
 printer = Serial(
     devfile="/dev/serial0",
@@ -18,6 +20,10 @@ printer.cut()
 
 
 def printList(id, project, tasks):
+
+    # Turn on blinking LED
+    yellowLED(3)
+
     # Print Header
     printer.set(align="center")
     printer.text(project)
@@ -43,6 +49,9 @@ def printList(id, project, tasks):
     printer.text("\n")
     printer.text("\n")
     printer.text("\n")
+
+    # Turn off blinking LED
+    yellowLED(0)
 
 
 def printError(error):
