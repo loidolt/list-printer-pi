@@ -35,11 +35,17 @@ def printList(id, project, tasks):
     printer.set(align="left")
 
     # Iterate through tasks
-    for index in range(len(tasks)):
-        printer.text("[]  ")
-        printer.text(str(tasks[index]["content"]))
+    if tasks != []:
+        for index in range(len(tasks)):
+            printer.text("[]  ")
+            printer.text(str(tasks[index]["content"]))
+            printer.text("\n")
+            printer.text("\n")
+    else:
+        printer.text("No tasks right now.\n")
         printer.text("\n")
-        printer.text("\n")
+        printer.text("Have a great day! :)")
+        printer.text("")
 
     # Generic Spacing After List
     printer.text("\n")
