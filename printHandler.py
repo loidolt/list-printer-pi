@@ -18,11 +18,11 @@ printer.cut()
 
 def printList(id, project, tasks):
     # Print Header
+    printer.set(align="center")
     printer.text(project)
     printer.text(" To Do")
     printer.text("\n")
     printer.text("\n")
-    printer.set(align="center")
     printer.qr("https://todoist.com/app/?lang=en#project%2F" + str(id))
     printer.text("\n")
     printer.text("\n")
