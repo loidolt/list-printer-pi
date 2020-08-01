@@ -45,7 +45,7 @@ def printList(id, project, tasks):
         printer.text("No tasks right now.\n")
         printer.text("\n")
         printer.text("Have a great day! :)")
-        printer.text("")
+        printer.text("\n")
 
     # Generic Spacing After List
     printer.text("\n")
