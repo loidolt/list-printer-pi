@@ -37,6 +37,6 @@ Enter the correct serial baud rate in the first line. This can be found by holdi
 5. Add to /etc/profile at the bottom so the script will run on startup
 
 `sudo nano /etc/profile`
-`sudo python /home/pi/list-printer-pi/main.py &`
+`sudo python3 /home/pi/list-printer-pi/main.py &`
 
 6. Reboot and test
