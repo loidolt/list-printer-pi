@@ -33,10 +33,9 @@ def printList(id, project, tasks):
 
     # Iterate through tasks
     for index in range(len(tasks)):
-        for key in tasks[index]:
-            printer.text(str(tasks[index][key]))
-
-    printer.text("\n")
+        for tasks[index]:
+            printer.text(str(tasks[index]["content"]))
+            printer.text("\n")
 
     # Generic Spacing After List
     printer.text("\n")
