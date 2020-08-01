@@ -31,9 +31,9 @@ def printList(id, project, tasks):
     printer.set(align="left")
 
     # Iterate through tasks
-    for key, value in tasks.items():
-        for k, v in value:
-            printer.text(value["content"])
+    for i in tasks.keys():
+        for j in tasks[i].keys():
+            printer.text(str(j))
 
     printer.text("\n")
 
