@@ -11,8 +11,8 @@ printer = Serial(
     dsrdtr=True,
 )
 
-printer.text("Hello World\n")
-printer.qr("You can readme from your smartphone")
+printer.text("List Printer Pi\n")
+printer.qr("https://github.com/loidolt/list-printer-pi.git")
 printer.cut()
 
 
@@ -34,5 +34,5 @@ def printList(id, project, list):
 
 def printError(error):
     printer.text("Whoopsies, got an error :(\n")
-    printer.qr(error)
+    printer.text(error)
     printer.cut()
