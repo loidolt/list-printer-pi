@@ -50,7 +50,7 @@ def getTasks(project_id):
     if response.status_code == 200:
         res_dict = response.json()
 
-        print(res_dict)
+        return(res_dict)
     else:
         print("Error code: ")
         print(response.status_code)
