@@ -59,7 +59,7 @@ def getTasks(project_id):
         config.todoist["tasks_endpoint"]
         + "project_id="
         + str(project_id)
-        + "&filter=today",
+        + "&filter=!recurring%265 days",
         headers={"Authorization": "Bearer %s" % config.todoist["token"]},
     )
     if response.status_code == 200:
