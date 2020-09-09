@@ -44,7 +44,7 @@ cd /lib/systemd/system/
 sudo nano listprinter.service
 ```
 
-_Italic_ Copy in from example file
+_Copy in from example file_
 
 ```
 sudo chmod 644 /lib/systemd/system/listprinter.service
