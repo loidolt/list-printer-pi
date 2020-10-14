@@ -39,7 +39,7 @@ def getProjectID(button):
         # project = getProjectInfo(config.projects["id3"])
         # tasks = getTasks(config.projects["id3"])
 
-        printList("12345", "Not Configured", [])
+        printList("12345", "Not Configured", [], [])
 
 
 def getProjectInfo(project_id):
