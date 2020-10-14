@@ -39,7 +39,7 @@ def printList(id, project, sections, tasks):
     # Print Section
     if sections != []:
         for i in range(len(sections)):
-            section_id = sections[i]["id"]
+            section_id = str(sections[i]["id"])
 
             printer.text(str(sections[i]["name"]))
             printer.text("\n")
@@ -47,15 +47,14 @@ def printList(id, project, sections, tasks):
             printer.text("\n")
             if tasks != []:
                 for index in range(len(tasks)):
-                    if section_id in tasks[index]:
+                    task_section = str(tasks[index]["section_id"])
+                    if section_id in task_section:
                         printer.text("[]  ")
                         printer.text(str(tasks[index]["content"]))
                         printer.text("\n")
                         printer.text("\n")
             else:
-                printer.text("No tasks right now.\n")
-                printer.text("\n")
-                printer.text("Have a great day! :)")
+                printer.text("No tasks for this section.\n")
                 printer.text("\n")
 
     else:
