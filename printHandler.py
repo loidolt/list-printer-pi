@@ -39,7 +39,7 @@ def printList(id, project, sections, tasks):
     # Print Section
     if sections != []:
         for index in range(len(sections)):
-            printer.text(str(sections[index]["name"])
+            printer.text(str(sections[index]["name"]))
             printer.text("\n")
             printer.text("--------------------")
             printer.text("\n")
@@ -68,7 +68,6 @@ def printList(id, project, sections, tasks):
             printer.text("\n")
             printer.text("Have a great day! :)")
             printer.text("\n")
-
 
     # Print tasks
 
