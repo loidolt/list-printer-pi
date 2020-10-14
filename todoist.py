@@ -17,17 +17,19 @@ def getProjectID(button):
         yellowLED(1)
 
         project = getProjectInfo(config.projects["id1"])
+        sections = getSections(config.projects["id1"])
         tasks = getTasks(config.projects["id1"])
 
-        printList(config.projects["id1"], project, tasks)
+        printList(config.projects["id1"], project, sections, tasks)
 
     elif button == 2:
         yellowLED(1)
 
         project = getProjectInfo(config.projects["id2"])
+        sections = getSections(config.projects["id1"])
         tasks = getTasks(config.projects["id2"])
 
-        printList(config.projects["id2"], project, tasks)
+        printList(config.projects["id2"], project, sections, tasks)
 
     elif button == 3:
         yellowLED(1)
@@ -48,6 +50,20 @@ def getProjectInfo(project_id):
     if response.status_code == 200:
         res_dict = response.json()
         return res_dict["name"]
+    else:
+        print("Error code: ")
+        print(response.status_code)
+        printError(response.status_code)
+
+
+def getSections(project_id):
+    response = requests.get(
+        config.todoist["sections_endpoint"] + str(project_id),
+        headers={"Authorization": "Bearer %s" % config.todoist["token"]},
+    )
+    if response.status_code == 200:
+        res_dict = response.json()
+        return res_dict
     else:
         print("Error code: ")
         print(response.status_code)

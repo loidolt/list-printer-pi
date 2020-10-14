@@ -22,7 +22,7 @@ printer.qr("https://github.com/loidolt/list-printer-pi.git")
 printer.cut()
 
 
-def printList(id, project, tasks):
+def printList(id, project, sections, tasks):
 
     # Print Header
     printer.set(align="center")
@@ -34,8 +34,43 @@ def printList(id, project, tasks):
     printer.text("\n")
     printer.text("\n")
 
-    # Print tasks
     printer.set(align="left")
+
+    # Print Section
+    if sections != []:
+        for index in range(len(sections)):
+            printer.text(str(sections[index]["name"])
+            printer.text("\n")
+            printer.text("--------------------")
+            printer.text("\n")
+            if tasks != []:
+                for index in range(len(tasks)):
+                    if sections[index]["id"] in tasks[index]:
+                        printer.text("[]  ")
+                        printer.text(str(tasks[index]["content"]))
+                        printer.text("\n")
+                        printer.text("\n")
+            else:
+                printer.text("No tasks right now.\n")
+                printer.text("\n")
+                printer.text("Have a great day! :)")
+                printer.text("\n")
+
+    else:
+        if tasks != []:
+            for index in range(len(tasks)):
+                printer.text("[]  ")
+                printer.text(str(tasks[index]["content"]))
+                printer.text("\n")
+                printer.text("\n")
+        else:
+            printer.text("No tasks right now.\n")
+            printer.text("\n")
+            printer.text("Have a great day! :)")
+            printer.text("\n")
+
+
+    # Print tasks
 
     # Iterate through tasks
     if tasks != []:
