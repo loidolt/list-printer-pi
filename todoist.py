@@ -26,7 +26,7 @@ def getProjectID(button):
         yellowLED(1)
 
         project = getProjectInfo(config.projects["id2"])
-        sections = getSections(config.projects["id1"])
+        sections = getSections(config.projects["id2"])
         tasks = getTasks(config.projects["id2"])
 
         printList(config.projects["id2"], project, sections, tasks)
@@ -37,6 +37,7 @@ def getProjectID(button):
         # SAVE FOR FUTURE USE
 
         # project = getProjectInfo(config.projects["id3"])
+        # sections = getSections(config.projects["id2"])
         # tasks = getTasks(config.projects["id3"])
 
         printList("12345", "Not Configured", [], [])
