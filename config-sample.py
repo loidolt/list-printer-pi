@@ -1,7 +1,7 @@
 todoist = dict(
     token="",
     project_endpoint="https://api.todoist.com/rest/v1/projects/",
-    sections_endpoint="https://api.todoist.com/rest/v1/sections",
+    sections_endpoint="https://api.todoist.com/rest/v1/sections?project_id=",
     tasks_endpoint="https://api.todoist.com/rest/v1/tasks?",
 )
 
