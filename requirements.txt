@@ -19,7 +19,7 @@ pylint==2.5.3
 pyserial==3.4
 python-escpos==2.2.0
 pyusb==1.0.2
-PyYAML==5.3.1
+PyYAML==5.4
 qrcode==6.1
 regex==2020.7.14
 requests==2.24.0
